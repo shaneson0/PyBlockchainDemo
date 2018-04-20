@@ -1,7 +1,7 @@
 # coding:utf8
 
 import sys
-sys.path.append("..")
+sys.path.append("../../")
 
 from Network.MinerNode import MinerNode
 from Network.protrol import *
@@ -10,7 +10,7 @@ import time
 
 try:
     # address, udpPort, tcpPort
-    myendpoint = EndPoint(u'127.0.0.1', 30307, 30308)
+    myendpoint = EndPoint(u'127.0.0.1', 30305, 30306)
     Discoverpoint = EndPoint(u'127.0.0.1', 30303, 30304)
 
     miner = MinerNode(myendpoint)
@@ -19,6 +19,7 @@ try:
     miner.start_udp_listern()
 
     print 'start tcp server '
+
     # tcp listern
     miner.start_tcp_listern()
 
@@ -27,7 +28,10 @@ try:
     # ping发现节点
     miner.ping(Discoverpoint)
     while True:
-        time.sleep(600)
+        time.sleep(60)
+        NeighbourAddress = MinerNode.SpecialDecode(miner.getNeighbours())
+        endpoint_to = EndPoint(NeighbourAddress['ip'], 0, NeighbourAddress['port'])
+        miner.chat(endpoint_to)
 
 except:
     traceback.print_exc()

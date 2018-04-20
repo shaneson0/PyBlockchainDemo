@@ -1,7 +1,7 @@
 # coding:utf8
 
 import sys
-sys.path.append("..")
+sys.path.append("../../")
 from Network.DiscoverNode import DiscoverNode
 from Network.protrol import *
 import sys
