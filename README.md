@@ -30,6 +30,8 @@ hash || signature || packet-type || packet-data
 
 服务列表
 
+![](../Pic/投票区块链服务关系图.png)
+
 services = [
     DBService,
     AccountsService,
@@ -38,3 +40,4 @@ services = [
     ChainService,
     PoWService,
     JSONRPCServer]
+
