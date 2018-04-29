@@ -10,7 +10,6 @@ class TransactionModel(object):
         self.amount = amount
         self.output = output
 
-
     def __str__(self):
         return json.dumps(self.__dict__)
 
