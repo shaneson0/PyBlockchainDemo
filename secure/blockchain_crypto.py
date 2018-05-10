@@ -55,12 +55,16 @@ def vertify_msg(private_key, signed_msg, msg):
 # 14tcrCrYJXRqVA6wnS6Ns7jhgZcfDpyJu2
 
 if __name__ == "__main__":
-    # priKey = create_private_key()
-    # print '--------- private key --------'
-    # print priKey
-    # print '--------- public key ---------'
-    # publicKey = create_public_key(priKey)
-    # print publicKey
+    priKey = create_private_key()
+    print '--------- private key --------'
+    print priKey
+    print '--------- public key ---------'
+    publicKey = create_public_key(priKey)
+    print publicKey
+    print '--------- Address ---------'
+    addr = publicKey_to_address(publicKey)
+    print addr
+    
     # publicKey = "045039541bc99c3d30c0f4e4684e4ce0686b00613c7d5c2bdf6d677e1b3d7bd4e045ae1739503df5742a82019b73f946fef0df982caa3808b36a734a869d698a16"
     # addr = publicKey_to_address(publicKey)
     # print '--------- address ---------'

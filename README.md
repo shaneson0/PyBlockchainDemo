@@ -9,7 +9,6 @@
 2. 共识机制
 3. 工作量证明算法（POW）
 
--------------
 
 2018/04/18
 
@@ -32,6 +31,7 @@ hash || signature || packet-type || packet-data
 
 ![](https://github.com/shanxuanchen/PyBlockchainDemo/blob/master/Pic/%E6%8A%95%E7%A5%A8%E5%8C%BA%E5%9D%97%E9%93%BE%E6%9C%8D%E5%8A%A1%E5%85%B3%E7%B3%BB%E5%9B%BE.png)
 
+```
 services = [
     DBService,
     AccountsService,
@@ -41,12 +41,20 @@ services = [
     PoWService,
     JSONRPCServer]
 
----------------
+```
+
 
 2018/04/28
 
 翻阅了《master blockchain》，了解了wallet的生成。
+
 补充了blockchain_crypto的部分，私钥生成，公钥生成，签名和封装。
+
+---------------
+
+
+
+
 
 
 
